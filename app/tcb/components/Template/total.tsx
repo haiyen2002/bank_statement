@@ -40,7 +40,7 @@ const Total = ({
     }
 
     return (
-        <section className="flex flex-col pt-5 pl-[24px] pr-[24px] pb-6 h-full h-[1074px] mx-auto  w-[840px]" >
+        <section className="flex flex-col pt-5 pl-[24px] pr-[24px] pb-6 h-full h-[1110px] mx-auto  w-[794px]" >
             <div className="flex mb-2" style={{ lineHeight: "15px" }}>
                 <div style={{ width: 160 }}>
                     <b>
@@ -48,17 +48,17 @@ const Total = ({
                         <p><i>Total</i></p>
                     </b>
                 </div>
-                <div className="flex" style={{ width: 130, justifyContent: "end" }}><b>210.714.648</b></div>
-                <div className="flex" style={{ width: 130, justifyContent: "end" }}><b>210.714.648</b></div>
+                <div className="flex" style={{ width: 110, justifyContent: "end" }}><b>359.732.865</b></div>
+                <div className="flex" style={{ width: 110, justifyContent: "end" }}><b>386.494.021</b></div>
             </div>
             <div className="flex mb-2" style={{ lineHeight: "15px" }}>
-                <div style={{ width: 420 }}>
+                <div style={{ width: 380 }}>
                     <b>
                         <p> Số dư cuối kỳ:</p>
                         <p><i>Closing Balance</i></p>
                     </b>
                 </div>
-                <div className="flex" style={{ width: 130, justifyContent: "end" }}><b>10.714.648</b></div>
+                <div className="flex" style={{ width: 110, justifyContent: "end" }}><b>43.861.037</b></div>
             </div>
             <div className="flex mb-[150px]" style={{ justifyContent: "end" }}>
                 <div>
