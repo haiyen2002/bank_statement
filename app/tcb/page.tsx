@@ -17,122 +17,129 @@ const Tcb = async () => {
       }}
     >
 <Template
-	data={data.slice(0,8)}
+	data={data.slice(0,9)}
 	page={1}
-  header={true}
-	totalPage={20}
+    header={true}
+	totalPage={21}
 />
 
 <Template
-	data={data.slice(8,23)}
+	data={data.slice(9,25)}
 	page={2}
   header={false}
-	totalPage={20}
+	totalPage={21}
 />
 <Template
-	data={data.slice(22,38)}
+	data={data.slice(25,42)}
 	page={3}
   header={false}
-	totalPage={20}
+	totalPage={21}
 />
 
 <Template
-	data={data.slice(38,55)}
+	data={data.slice(42,59)}
 	page={4}
   header={false}
-	totalPage={20}
+	totalPage={21}
 />
 <Template
-	data={data.slice(55,70)}
+	data={data.slice(59,74)}
 	page={5}
   header={false}
-	totalPage={20}
+	totalPage={21}
 />
 <Template
-	data={data.slice(70,86)}
+	data={data.slice(74,90)}
 	page={6}
   header={false}
-	totalPage={20}
+	totalPage={21}
 />
 <Template
-	data={data.slice(85,100)}
+	data={data.slice(90,106)}
 	page={7}
   header={false}
-	totalPage={20}
+	totalPage={21}
 />
 <Template
-	data={data.slice(100,116)}
+	data={data.slice(106,122)}
 	page={8}
   header={false}
-	totalPage={20}
+	totalPage={21}
 />
 <Template
-	data={data.slice(116,131)}
+	data={data.slice(122,137)}
 	page={9}
   header={false}
-	totalPage={20}
+	totalPage={21}
 />
 <Template
-	data={data.slice(131,147)}
+	data={data.slice(137,153)}
 	page={10}
   header={false}
-	totalPage={20}
+	totalPage={21}
 />
 <Template
-	data={data.slice(147,163)}
+	data={data.slice(153,169)}
 	page={11}
   header={false}
-	totalPage={20}
+	totalPage={21}
 />
 <Template
-	data={data.slice(163,178)}
+	data={data.slice(169,185)}
 	page={12}
   header={false}
-	totalPage={20}
+	totalPage={21}
 />
 <Template
-	data={data.slice(178,194)}
+	data={data.slice(185,202)}
 	page={13}
   header={false}
-	totalPage={20}
+	totalPage={21}
 />
 <Template
-	data={data.slice(194,210)}
+	data={data.slice(202,218)}
 	page={14}
   header={false}
-	totalPage={20}
+	totalPage={21}
 />
 <Template
-	data={data.slice(210,226)}
+	data={data.slice(218,235)}
 	page={15}
   header={false}
-	totalPage={20}
+	totalPage={21}
 />
 <Template
-	data={data.slice(226,242)}
+	data={data.slice(235,252)}
 	page={16}
   header={false}
-	totalPage={20}
+	totalPage={21}
 />
 <Template
-	data={data.slice(242,258)}
+	data={data.slice(252,269)}
 	page={17}
   header={false}
-	totalPage={20}
+	totalPage={21}
 />
 <Template
-	data={data.slice(258,274)}
+	data={data.slice(269,284)}
 	page={18}
   header={false}
-	totalPage={20}
+	totalPage={21}
 />
 <Template
-	data={data.slice(274,282)}
+	data={data.slice(284,300)}
 	page={19}
   header={false}
-	totalPage={20}
+//   footer={true}
+	totalPage={21}
 />
-      <Total 	page={20} totalPage={20}/>
+<Template
+	data={data.slice(300,302)}
+	page={20}
+  header={false}
+	totalPage={21}
+/>
+      <Total 	page={21} totalPage={21}/>
 
     </main>
   );

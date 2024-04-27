@@ -6,11 +6,13 @@ import style from "./style.module.scss";
 import { info } from "../../assets/data";
 import moment from "moment";
 import vcb from "../../assets/vcb.png";
+import Total from "./../Template/total";
 
 const Template = ({
   data,
   hasFirst,
   hasLast,
+  footer,
   page,
   header,
   totalPage,
@@ -18,6 +20,7 @@ const Template = ({
   data: any[];
   hasFirst?: boolean;
   hasLast?: boolean;
+  footer?: boolean;
   page?: number;
   header?: boolean;
   totalPage?: number;
@@ -25,12 +28,13 @@ const Template = ({
   const wrapperRef = useRef<any>(null)
 
  const formatCurrency =(number:any)=> {
+    number = number+"";
     return number.replace(/,/g, ".");
   }
 
   return (
-    <section className="flex flex-col pt-5 pl-[30px] pr-[30px] pb-6 h-full h-[1074px] mx-auto  w-[840px]" >
-      {header && <header>
+    <section className="flex flex-col pt-5 pl-[33px] pr-[33px] pb-6 h-full h-[1110px] mx-auto  w-[794px]" >
+      {header ? (<header>
         {/* Header top */}
         <div className="flex justify-between mb-1">
           <div className="w-[31.8%] flex justify-start h-fit">
@@ -70,7 +74,7 @@ const Template = ({
           </p>
           <p className="mt-[5px] w-[43%]">
             Ngày thực hiện/<i> Date:</i>
-            <span className="ml-2">25/04/2024</span>
+            <span className="ml-2">02/05/2024</span>
           </p>
         </div>
         <div className="mb-3" style={{ display: "flex", justifyContent: "space-between", width: "100%" }}>
@@ -99,7 +103,7 @@ const Template = ({
         <div className="mb-2" style={{ width: "100%" }}>
           <p className="mt-[5px] w-[57%]">
             Địa chỉ/<i>Address:</i>
-            <span className="ml-1">11/1B HOANG , HUAN, KP6, TT. CU CHI, CU CHI, TP. HO CHI MINH</span>
+            <span className="ml-1">11/1B HOANG BA, HUAN, KP6, TT. CU CHI, CU CHI, TP. HCM</span>
           </p>
         </div>
 
@@ -134,26 +138,33 @@ const Template = ({
           </p>
           <p className="mt-[5px]" style={{ width: 150 }}>
             Đến/<i>To:</i>
-            <span className="ml-5">10/04/2024</span>
+            <span className="ml-5">25/04/2024</span>
           </p>
         </div>
         <div className="mb-4" style={{ width: "100%" }}>
           <p className="mt-[5px] w-[57%]">
             <b> Số dư đầu kỳ/<i>Opening balance:</i> </b>
-            <span className="ml-[170px]">17.099.881</span>
+            <span className="ml-[130px]">17.099.881</span>
           </p>
         </div>
 
 
 
-      </header>}
+      </header>):
+      (
+        <div >
 
+        </div>
+      )
+      }
+        
       {/* Table */}
-      <div ref={wrapperRef} style={{ height: "100%" }}>
+      {/* <div ref={wrapperRef} className={`mt-1 ${hasLast ? "" : "h-[565px] overflow-x-hidden"}`}> */}
+      <div ref={wrapperRef} style={!header?{marginTop:"30px",height:"940px"}:{height:"650px"}}>
         <table className={`w-full ${style.table}`}>
           <thead>
             <tr>
-              <th className="" style={{ width: "40px" }}>
+              <th className="w-[40px]">
                 STT
                 <br />
                 <i>No</i>
@@ -205,21 +216,24 @@ const Template = ({
             )}
             {/* Data Rows */}
             {data.map((item, index) => {
+              
               return (
                 <tr key={index} style={!hasLast && index === data.length - 1 ? { borderBottomStyle: "solid" } : {}} className={!hasLast && index === data.length - 1 ? "last-row " : ""}>
                   <td  >
                     <div className="flex pl-[6px] pt-[2px]" style={{lineHeight:"13px",display:"inline-block", width: "100%" }}>
                       <span className="inline-block min-h-[16.5px]" />
-                      {item.a}
+                
+                    {item.a}
                     </div>
                   </td>
                   <td  >
                     <div className="flex pl-[5px]  pt-[1px]">
                       <span className="inline-block min-h-[16.5px]" />
                       <b  >
-                        {item.b}
+                      {item.b.split('\n  ')[0]}
+                      
                         <br />
-                        5272.20135
+                        {item.b.split('\n  ')[1]}
                       </b>
 
                     </div>
@@ -245,7 +259,7 @@ const Template = ({
                     </div>
                   </td>
                   <td  style={{ width: "242px"}} className="detail-cl">
-                    <div  className="test-class pl-[2px]  pt-[1px]" style={{ textAlign: "left" , lineHeight:"16px",display:"inline-block",width:"217px",wordWrap:"break-word"}}>
+                    <div  className="test-class pl-[4px]  pt-[1px]" style={{ textAlign: "left" , lineHeight:"16px",display:"inline-block",width:"217px",wordWrap:"break-word"}}>
                     <span className="inline-block min-h-[16.5px]" />
                       {item.f}
                     </div>
@@ -254,36 +268,17 @@ const Template = ({
               );
             })}
 
-            {/* Last Two Rows */}
-            {hasLast && (
-              <>
-                <tr className={style.row_last}>
-                  <td colSpan={4}>Cộng doanh số/Total Volume</td>
-                  {info.total_volume.map((item, index) => (
-                    <td key={index}>{item}</td>
-                  ))}
-                </tr>
-                <tr className={style.row_last}>
-                  <td colSpan={4}>
-                    <b>Số dư cuối kỳ/</b>
-                    <b>Ending balance</b>
-                  </td>
-                  <td></td>
-                  <td></td>
-                  <td>
-                    <b>{info.ending_balance}</b>
-                  </td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </>
-            )}
+            
           </tbody>
         </table>
       </div>
 
-      <footer  className="mt-auto pt-2 text-[11px] text-center leading-[1.15] tracking-[-0.3px]">
+        {/* {
+          footer &&  <Total/>
+
+        } */}
+
+<footer  className="mt-auto pt-2 text-[11px] text-center leading-[1.15] tracking-[-0.3px]">
        <div style={{ display: "flex", justifyContent: "space-between",lineHeight:"14px" }}>
        <div className="mb-[2px]" >
           <p style={{ textAlign: "left" }}>Postal address: </p>
@@ -301,7 +296,8 @@ const Template = ({
         <p style={{ textAlign:"right"}}>Page {page} of {totalPage}</p>
       </div>
       </footer>
-      
+
+     
     </section>
   );
 };
