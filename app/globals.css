@@ -8,3 +8,10 @@ body {
   line-height: 1.01;
   letter-spacing: 0.01px;
 }
+
+.border_div{
+  height: 20px;
+  border: 1px solid;
+  line-height: 20px;
+  text-align: center;
+}

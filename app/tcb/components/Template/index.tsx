@@ -33,7 +33,7 @@ const Template = ({
   }
 
   return (
-    <section className="flex flex-col pt-5 pl-[33px] pr-[33px] pb-6 h-full h-[1110px] mx-auto  w-[794px]" >
+    <section className="flex flex-col pt-5 pl-[33px] pr-[33px] pb-6 h-full h-[1119px] mx-auto  w-[794px]" >
       {header ? (<header>
         {/* Header top */}
         <div className="flex justify-between mb-1">
@@ -70,17 +70,17 @@ const Template = ({
         <div className="mb-3" style={{ display: "flex", justifyContent: "space-between", width: "100%" }}>
           <p className="mt-[5px] w-[57%]">
             <span style={{ display: "inline-block", width: 150 }}>Tên tài khoản/<i>Account name:</i></span>
-            <span > TA QUANG BAC</span>
+            <span > NGUYEN THE HUNG</span>
           </p>
           <p className="mt-[5px] w-[43%]">
             Ngày thực hiện/<i> Date:</i>
-            <span className="ml-2">02/05/2024</span>
+            <span className="ml-2">13/05/2024</span>
           </p>
         </div>
         <div className="mb-3" style={{ display: "flex", justifyContent: "space-between", width: "100%" }}>
           <p className="mt-[5px] w-[57%]">
             <span style={{ display: "inline-block", width: 150 }}>Số tài khoản/<i>Account number:</i></span>
-            <span > 0071000689735</span>
+            <span > 0351000646393</span>
           </p>
           <p className="mt-[5px] w-[43%]">
             Chi nhánh thực hiện/<i> Branch:</i>
@@ -103,25 +103,25 @@ const Template = ({
         <div className="mb-2" style={{ width: "100%" }}>
           <p className="mt-[5px] w-[57%]">
             Địa chỉ/<i>Address:</i>
-            <span className="ml-1">11/1B HOANG BA, HUAN, KP6, TT. CU CHI, CU CHI, TP. HCM</span>
+            <span className="ml-1">DONG NGUYEN - TU SON - BN</span>
           </p>
         </div>
 
         <div className="mb-2" style={{ width: "100%" }}>
-          <p className="mt-[5px] w-[57%]">
-            <p style={{ display: "inline-block", width: 160 }}>
+          <div className="flex mt-[5px] w-[57%]">
+            <div style={{ display: "inline-block", width: 160 }}>
               <p>CMND/CCCD/Hộ chiếu số: </p>
               <br />
-              <i className="mt-1">ID/Citizen ID/PP No:</i>
-            </p>
-            <span>040086015322</span>
-          </p>
+              <i className="mt-[1px]">ID/Citizen ID/PP No:</i>
+            </div>
+            <div>125377115</div>
+          </div>
         </div>
 
         <div className="mb-2" style={{ width: "100%" }}>
           <p className="mt-[5px] w-[57%]">
             <span style={{ display: "inline-block", width: 160 }}> CIF:</span>
-            <span >6109734</span>
+            <span >5569770</span>
           </p>
         </div>
         <div className="mb-2" style={{ width: "100%" }}>
@@ -134,17 +134,17 @@ const Template = ({
         <div className="mb-2" style={{ width: "100%", display: "flex" }}>
           <p className="mt-[5px]" style={{ display: "inline-block", width: 160 }}>
             Từ/<i>From:</i>
-            <span className="ml-5">01/11/2023 </span>
+            <span className="ml-5"> 30/10/2023 </span>
           </p>
           <p className="mt-[5px]" style={{ width: 150 }}>
             Đến/<i>To:</i>
-            <span className="ml-5">25/04/2024</span>
+            <span className="ml-5">10/05/2024</span>
           </p>
         </div>
         <div className="mb-4" style={{ width: "100%" }}>
           <p className="mt-[5px] w-[57%]">
             <b> Số dư đầu kỳ/<i>Opening balance:</i> </b>
-            <span className="ml-[130px]">17.099.881</span>
+            <span className="ml-[130px]">151.547</span>
           </p>
         </div>
 
@@ -227,13 +227,13 @@ const Template = ({
                     </div>
                   </td>
                   <td  >
-                    <div className="flex pl-[5px]  pt-[1px]">
+                  <div className="flex pl-[6px]  pt-[1px]">
                       <span className="inline-block min-h-[16.5px]" />
                       <b  >
-                      {item.b.split('\n  ')[0]}
+                      {item.b.split('\n')[0]}
                       
                         <br />
-                        {item.b.split('\n  ')[1]}
+                        {item.b.split('\n')[1]}
                       </b>
 
                     </div>
@@ -241,25 +241,25 @@ const Template = ({
 
                   </td>
                   <td  >
-                  <div className="flex  pt-[1px]" style={{lineHeight:"16px",display:"inline-block", width: "100%", textAlign: "end" }}>
+                  <div className="flex pr-[6px]  pt-[1px]" style={{lineHeight:"16px",display:"inline-block", width: "100%", textAlign: "end" }}>
                       <span className="inline-block min-h-[16.5px]" />
                       {item.c != "" && item.c != null && formatCurrency(item.c)}
                     </div>
                   </td>
                   <td  >
-                  <div className="flex  pt-[1px]" style={{lineHeight:"16px",display:"inline-block", width: "100%", textAlign: "end" }}>
+                  <div className="flex pr-[6px] pt-[1px]" style={{lineHeight:"16px",display:"inline-block", width: "100%", textAlign: "end" }}>
                       <span className="inline-block min-h-[16.5px]" />
                       {item.d != "" && item.d != null && formatCurrency(item.d)}
                     </div>
                   </td>
                   <td  >
-                    <div className="flex  pt-[1px]" style={{lineHeight:"16px",display:"inline-block", width: "100%", textAlign: "end" }}>
+                    <div className="flex pr-[6px]  pt-[1px]" style={{lineHeight:"16px",display:"inline-block", width: "100%", textAlign: "end" }}>
                       <span className="inline-block min-h-[16.5px]" />
                       {item.e != "" && item.e != null && formatCurrency(item.e)}
                     </div>
                   </td>
                   <td  style={{ width: "242px"}} className="detail-cl">
-                    <div  className="test-class pl-[4px]  pt-[1px]" style={{ textAlign: "left" , lineHeight:"16px",display:"inline-block",width:"217px",wordWrap:"break-word"}}>
+                    <div  className="test-class pl-[6px]  pt-[1px]" style={{ textAlign: "left" , lineHeight:"16px",display:"inline-block",width:"219px",wordWrap:"break-word"}}>
                     <span className="inline-block min-h-[16.5px]" />
                       {item.f}
                     </div>
@@ -285,7 +285,7 @@ const Template = ({
           <p style={{ textAlign: "left" }}>198 TRAN QUANG KHAI AVENUE </p>
           <p style={{ textAlign: "left" }}>HANOI - S.R.VIETNAM</p>
         </div>
-        <div style={{width:"240px"}}> 
+        <div style={{width:"232px"}}> 
           <p style={{ textAlign: "left" }}>Telex:  (0805) 411504 VCB - VT </p>
           <p style={{ textAlign: "left" }}>Swift:  BFTV VNVX </p>
           <p style={{ textAlign: "left" }}>Website:  www.vietcombank.com.vn</p>
@@ -293,7 +293,7 @@ const Template = ({
         </div>
        </div>
        <div className="mt-1 mt-auto " style={{ width: "100%" }}>
-        <p style={{ textAlign:"right"}}>Page {page} of {totalPage}</p>
+       <p style={{ textAlign:"right"}}>Page {page} of &nbsp;{totalPage}</p>
       </div>
       </footer>
 
