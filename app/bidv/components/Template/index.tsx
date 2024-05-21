@@ -57,7 +57,7 @@ const Template = ({
               </b>
               <div className="mt-3 flex">
                 <span className="mr-5"><b>Chi nhánh/Branch:</b></span>
-                <span><b>TÂN BÌNH</b></span>
+                <span><b>Bình Thạnh</b></span>
               </div>
               <div className="flex justify-center mt-[8px]">
                 <div className="w-[120px]" style={{ border: "1px solid" ,borderBottomStyle:"hidden"}}></div>
@@ -67,7 +67,7 @@ const Template = ({
           </div>
           <div className="pt-2 mr-[40px]">
             <div className="mb-3 flex"><div className="w-[150px]">Mẫu số/Sample-No:</div> <span> CT001/KH</span></div>
-            <div className="flex"><div className="w-[150px]">Ngày in/Prt Date:</div> <span>  13/05/2024 &nbsp;&nbsp;09:07:05</span></div>
+            <div className="flex"><div className="w-[150px]">Ngày in/Prt Date:</div> <span>  22/05/2024 &nbsp;&nbsp;09:07:05</span></div>
           </div>
         </div>
         {/* <div style={{ border: "1px solid" }}></div> */}
@@ -77,15 +77,15 @@ const Template = ({
 
         <div>
           <div className="mt-5">
-            <div className="pl-[180px]"><span className="mr-5">Số:</span> <span>/BC 03a</span></div>
+            <div className="pl-[210px]"><span className="mr-5">Số:</span> <span>/BC 03a</span></div>
             <div style={{ textAlign: "center" }} className="mb-[12px] mt-2">
               <b className="" style={{ fontSize: "15px" }}>
                 SAO KÊ TÀI KHOẢN TIỀN GỬI KHÁCH HÀNG/ACCOUNT STATEMENT
               </b>
               <div className="mt-3">
                 <div>
-                  <span className="mr-4"><b >Từ ngày<span style={{ fontSize: "10px" }}>/</span></b>From Date:</span> <span className="mr-5">25/01/2024  </span>
-                  <span className="mr-4"> <b>Đến ngày<span style={{ fontSize: "10px" }}>/</span></b>To date:</span> <span>05/05/2024</span>
+                  <span className="mr-4"><b >Từ ngày<span style={{ fontSize: "10px" }}>/</span></b>From Date:</span> <span className="mr-5"> 01/05/2024  </span>
+                  <span className="mr-4"> <b>Đến ngày<span style={{ fontSize: "10px" }}>/</span></b>To date:</span> <span> 15/05/2024</span>
                 </div>
               </div>
             </div>
@@ -99,7 +99,7 @@ const Template = ({
                     </div>
                     <i> Customer : </i>
                   </div>
-                  <b>CHU KY DIEU</b>
+                  <b>HO DINH TUAN</b>
                 </div>
                 <div className="flex mb-3">
                   <div className="w-[190px] flex" >
@@ -108,7 +108,7 @@ const Template = ({
                     </div>
                     <i>Cif No: </i>
                   </div>
-                  <b>7838133</b>
+                  <b>1537536</b>
                 </div>
                 <div className="flex mb-3">
                   <div className="w-[190px] flex" >
@@ -117,7 +117,7 @@ const Template = ({
                     </div>
                     <i> Account name:</i>
                   </div>
-                  <span>CHU KY DIEU</span>
+                  <span>HO DINH TUAN</span>
                 </div>
                 <div className="flex mb-3">
                   <div className="w-[190px] flex" >
@@ -126,16 +126,16 @@ const Template = ({
                     </div>
                     <i> Account No:</i>
                   </div>
-                  <b>5110664631</b>
+                  <b>1360095634</b>
                 </div>
                 <div className="flex" style={{fontSize:"10px"}}>
                   <div className="w-[190px] flex" >
                     <div className="w-[79px]">
                       <i>(Số tài khoản cũ / </i>
                     </div>
-                    <i> Old Account No:)</i>
+                    <i> Old Account No: </i>
                   </div>
-                  <i></i>
+                  <i>13610000095634)</i>
                 </div>
               </div>
               <div>
@@ -144,7 +144,7 @@ const Template = ({
                     <b className="mb-1">Địa chỉ/</b>
                     <i>Address:</i>
                   </div>
-                  <div className="w-[210px]">39/3 DUONG SON KY, P. SON KY, Q. TAN PHU /,TP. HO CHI MINH</div>
+                  <div className="w-[210px]">TO 11 PHUONG 2 BAO LOC      /.LAM DONG</div>
                 </div>
                 <div className="flex" style={{ alignItems: "center" }}>
                   <div className="flex w-[70px]" style={{ flexDirection: "column" }}>
@@ -259,7 +259,7 @@ const Template = ({
                 </td>
                 <td style={{ textAlign: "right" }}>
                   <div className="flex justify-center" style={{ flexDirection: "column", height: "35px" }}>
-                    <b>220,578,445.00</b>
+                    <b>1.368.053,00</b>
                   </div>
                 </td>
                 <td colSpan={4}></td>
@@ -328,10 +328,10 @@ const Template = ({
                   </div>
                 </td>
                 <td style={{ textAlign: "right", verticalAlign: "middle" }}>
-                  <b>156,271,062.00</b>
+                  <b>15,387,000.00</b>
                 </td>
                 <td style={{ textAlign: "right", verticalAlign: "middle" }}>
-                  <b>196,626,951.00</b>
+                  <b>27,340,640.00</b>
                 </td>
                 <td colSpan={5}></td>
               </tr>
@@ -343,7 +343,7 @@ const Template = ({
                   </div>
                 </td>
                 <td style={{ textAlign: "right", verticalAlign: "middle" }}>
-                  <b>260,934,334.00</b>
+                  <b>13,321,693.00</b>
                 </td>
                 <td colSpan={4}></td>
               </tr>
@@ -366,11 +366,11 @@ const Template = ({
         {footer && <div  className="flex w-[351px] ml-[351px]" style={{flexDirection:"column",fontSize:"13px"}}>
           <div style={{textAlign:"left"}}>Ký bởi: Ngân hàng Thương mại Cổ phần</div>
           <div style={{textAlign:"left"}}>Đầu tư và Phát triển Việt Nam - Chi nhánh</div>
-          <div style={{textAlign:"left"}}>Tân Bình</div>
-          <div style={{textAlign:"left"}}>Thời gian ký: 13/05/2024 &nbsp;&nbsp;09:07:05</div>
+          <div style={{textAlign:"left"}}>Bình Thạnh</div>
+          <div style={{textAlign:"left"}}>Thời gian ký: 22/05/2024 &nbsp;&nbsp;09:07:05</div>
         </div>}
         <div style={{ display: "flex" }}>
-          <span className="mr-[172px]">Chứng từ này được in/chuyển đổi trực tiếp từ hệ thống In sao kê tài khoản khách hàng của BIDV.</span>
+          <span className="mr-[172px]"><i>Chứng từ này được in/chuyển đổi trực tiếp từ hệ thống In sao kê tài khoản khách hàng của BIDV.</i></span>
           <span> Trang/Page No {page} of {totalPage}</span>
         </div>
       </footer>

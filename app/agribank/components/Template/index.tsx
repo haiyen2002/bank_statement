@@ -36,165 +36,171 @@ const Template = ({
   return (
     <section
 
-      className="flex flex-col pt-5 pl-[33px] pr-[33px] pb-6 h-full h-[1117px] mx-auto  w-[794px]" >
-      {header ? (<header>
+      className="flex flex-col pt-9 pl-[33px] pr-[33px] pb-6 h-full h-[1122px] mx-auto  w-[794px]" >
+      <header>
         {/* Header top */}
-        <div className="flex justify-between pt-[5px]">
+        <div className="flex justify-between pt-[5px]" style={{fontSize:"13px"}}>
           <div className="flex" style={{ flexDirection: "column" }}>
             <div className="mb-[4px]">
               <b>Chi nhánh:</b>
-              <b>NHNopasdfnasd ádfaskdjfhasd</b>
+              <b className="ml-[27px]">{info.branch}</b>
             </div>
             <div className="mb-[4px]">
               <span>Địa chỉ:</span>
-              <span>TX Cửa lò, Nghệ An</span>
+              <span className="ml-[48px]">{info.branchAddress}</span>
             </div>
             <div className="">
               <span>Điện thoại/Fax:</span>
+              <span className="ml-[9px]">{info.fax}</span>
             </div>
           </div>
           <div className="">
             <img className="h-[50px] w-[190px]" src={agr.src} />
           </div>
         </div>
-        <div style={{ border: "1px solid" }}></div>
+        <div className="mt-[2px]" style={{ border: "1px solid", borderBottomStyle: "hidden" }}></div>
 
 
         {/* Header mid */}
 
         <div>
-          <div className="mt-3">
-            <div style={{ fontSize: "19px", textAlign: "center" }} className="mb-[12px]">
+          <div className="ttttte" style={header ? { marginTop: "10px" } : { marginTop: "3px" }}>
+            {header ? (<div style={{ fontSize: "19px", textAlign: "center" }} className="mb-[12px]">
               <b className="">
                 SỔ PHỤ / STATEMENT
               </b>
-            </div>
+            </div>) : (<div></div>)}
 
-            <div>
-              <div>
-                <b>Tên khách hàng</b><span>/ Customer name : </span> <span>Nguyễn Huy XÔ</span>
-              </div>
-              <div>
-                <b>Địa chỉ</b><span> / Address : </span> <span> Khóm 3, TT Định An Trà Vinh</span>
-              </div>
-              <div>
-                <b>Ngày in</b><span> / Address : </span> <span> Khóm 3, TT Định An Trà Vinh</span>
-              </div>
-            </div>
+            {header ? (
+              <div className="flex justify-between" style={{fontSize:"13px"}}>
+                <div className="w-[55%]">
+                  <div className="mb-2">
+                    <b>Tên khách hàng</b><span style={{fontSize:"11px"}}>/ Customer name : </span> <span className="ml-[5px]">{info.customerName}</span>
+                  </div>
+                  <div className="mb-2">
+                    <b>Địa chỉ</b><span style={{fontSize:"11px"}}> / Address : </span> <span className="ml-[5px]">{info.address}</span>
+                  </div >
+                  <div className="mb-2">
+                    <b>Ngày in</b><span style={{fontSize:"11px"}}> / Print out date &nbsp;&nbsp;: </span> <span className="ml-[6px]">{info.printed_date}</span>
+                  </div>
+                  <div className="mb-2">
+                    <b>Loại tiền gửi</b><span style={{fontSize:"11px"}}> / DP kind : </span> <span className="ml-[5px]"> {info.type_of_account}</span>
+                  </div>
+                  <div className="mb-2">
+                    <b>Số tài khoản</b><span style={{fontSize:"11px"}}> / A/C No &nbsp;: </span> <span className="ml-[5px]"> {info.account_no}</span>
+                  </div>
+                  <div className="mb-2 flex justify-between pr-1">
+                    <div><b>Ngày phát sinh trước</b><span style={{fontSize:"11px"}}> / Prior Statement : </span> <span className="pl-[5px]"> {info.from_date} </span></div> <div className=""> <span className="">{info.priorBlance}</span></div>
+                  </div>
+                  <div className="mb-2 flex justify-between pr-1">
+                    <div><b>Số dư cuối ngày</b><span className="mr-[28px]" style={{fontSize:"11px"}}> / Ending balance  </span> <span><span style={{fontSize:"11px"}} className="ml-[2px]">: &nbsp;&nbsp;</span>{info.to_date}</span></div> <span>{info.endingBalance}</span>
+                  </div>
+                  <div className="mb-2 flex justify-between pr-1">
+                    <div><b>Số bút toán/Doanh số nợ</b><span className="mr-[5px]" style={{fontSize:"11px"}}> / Less debit  </span> <span style={{fontSize:"11px"}} className="mr-[38px]"> :</span> <span > {info.numberOut}</span></div> <span>{info.lessDebit}</span>
+                  </div>
+                  <div className="mb-2 flex justify-between pr-1">
+                    <div><b>Số bút toán/Doanh số có</b><span className="mr-[5px]" style={{fontSize:"11px"}}> / Plus credit </span> <span style={{fontSize:"11px"}} className="mr-[38px]">:</span> <span>{info.numberIn}</span></div> <span>{info.plusDebit}</span>
+                  </div>
+                </div>
+                <div className="w-[45%]">
+                  <div className="mb-2 mt-[42.5px]">
+                    <b>Loại tiền</b><span style={{fontSize:"11px"}}> / Ccy : </span> <span className="ml-2"> VND</span>
+                  </div>
+                  <div className="mb-2">
+                    <b>Tài khoản đồng sở hữu</b><span style={{fontSize:"11px"}}> / Join A/C : </span> <span className="ml-2"> No</span>
+                  </div>
+                  <div className="mb-2">
+                    <b>Tình trạng tài khoản</b><span style={{fontSize:"11px"}}> / A/C status </span><span className="ml-[5px]" style={{fontSize:"11px"}}>:</span> <span className="ml-2"> Active</span>
+                  </div>
+                  <div className="mb-2 flex justify-between">
+                    <div><b>Doanh số nợ tháng</b><span style={{fontSize:"11px"}}> / Monthly less debit : </span></div> <span>{info.monthLessDebit}</span>
+                  </div>
+                  <div className="mb-2 flex justify-between">
+                    <div> <b className="">Doanh số có tháng</b><span style={{fontSize:"11px"}}> / Monthly plus credit: </span></div> <span> {info.monthlyPlusDebit}</span>
+                  </div>
+                  <div className="mb-2 flex justify-between">
+                    <div><b>Doanh số nợ năm</b><span style={{fontSize:"11px"}}> / Annual less debit </span> <span className="ml-[13px]" style={{fontSize:"11px"}}>:</span></div> <span> {info.annualyLessDebit}</span>
+                  </div>
+                  <div className="mb-2 flex justify-between">
+                    <div><b>Doanh số có năm</b><span style={{fontSize:"11px"}}> / Annual plus credit </span> <span className="ml-[11px]" style={{fontSize:"11px"}}>:</span></div> <span> {info.annualyPlusDebit}</span>
+                  </div>
+                </div>
+              </div>) :
+              (<div></div>)
+            }
           </div>
         </div>
       </header>
-      ) :
-        (
-          <div >
-
-          </div>
-        )
-      }
 
       {/* Table */}
       {/* <div ref={wrapperRef} className={`mt-1 ${hasLast ? "" : "h-[565px] overflow-x-hidden"}`}> */}
-      <div ref={wrapperRef} style={!header ? { marginTop: "30px", height: "940px" } : { height: "650px" }}>
+      <div ref={wrapperRef} style={!header ? { height: "940px" } : { height: "650px" }}>
         <table className={`w-full ${style.table}`}>
-          <thead>
+          <thead style={{ backgroundColor: "#ded7d780" }}>
             <tr>
-              <th className="w-[40px]">
-                STT
+              <th className="w-[60px]">
+                <b>Ngày</b>
                 <br />
-                <i>No</i>
+                <span> Date</span>
               </th>
-              <th style={{ width: "120px" }}>
-                Ngày GD/
-                <br />
-                <i>TNX Date</i>
-                <br />
-                <i>Số CT/ Doc No</i>
+              <th style={{ width: "177px" }}>
+               <b> Ghi chú</b> <br />
+                <span>Remark</span>
               </th>
-              <th style={{ width: "120px" }}>
-                Số tiền ghi nợ/ <br />
-                <i>Debit</i>
+              <th style={{ width: "110px" }}>
+                <b>Nợ</b> <br />
+                <span>Dr</span>
               </th>
-              <th style={{ width: "120px" }}>
-                Số tiền ghi có/ <br />
-                <i>Credit</i>
+              <th style={{ width: "110px" }}>
+                <b>Có</b>  <br />
+                <span>Cr</span>
               </th>
-              <th style={{ width: "120px" }}>
-                Số dư/  <br />
-                <i>Balance</i>
+              <th style={{ width: "140px" }}>
+                <b>Số dư</b>  <br />
+                <span>Balance</span>
               </th>
-              <th style={{ width: "180px" }}>
-                Nội dung chi tiết/ <br />
-                <i>Transactions in detail</i>
+              <th style={{ width: "175px" }}>
+                <b>Số tham chiếu</b> <br />
+                <span>Ref. no</span>
               </th>
 
             </tr>
           </thead>
 
           <tbody>
-            {/* First Row */}
-            {hasFirst && (
-              <tr className={style.row_first}>
-                <td colSpan={4}>
-                  <b>Số dư đầu kỳ/</b>
-                  <b>Open balance</b>
-                </td>
-                <td></td>
-                <td></td>
-                <td>
-                  <b>{info.open_balance}</b>
-                </td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            )}
-            {/* Data Rows */}
             {data.map((item, index) => {
 
               return (
                 <tr key={index} style={!hasLast && index === data.length - 1 ? { borderBottomStyle: "solid" } : {}} className={!hasLast && index === data.length - 1 ? "last-row " : ""}>
-                  <td  >
-                    <div className="flex pl-[6px] pt-[2px]" style={{ lineHeight: "13px", display: "inline-block", width: "100%" }}>
-                      <span className="inline-block min-h-[16.5px]" />
-
+                  <td className="w-[60px] text-center" style={{ verticalAlign: "top" }}>
+                    <div className="w-[60px]" >
                       {item.a}
-                    </div>
-                  </td>
-                  <td  >
-                    <div className="flex pl-[5px]  pt-[1px]">
-                      <span className="inline-block min-h-[16.5px]" />
-                      <b  >
-                        {item.b.split('\n  ')[0]}
-
-                        <br />
-                        {item.b.split('\n  ')[1]}
-                      </b>
-
                     </div>
                     <br />
 
                   </td>
-                  <td  >
-                    <div className="flex  pt-[1px]" style={{ lineHeight: "16px", display: "inline-block", width: "100%", textAlign: "end" }}>
-                      <span className="inline-block min-h-[16.5px]" />
-                      {item.c != "" && item.c != null && formatCurrency(item.c)}
+                  <td className="w-[177px] text-left" style={{ verticalAlign: "top" }}>
+                    <div className="flex w-[177px]" style={{ textAlign: "left",display: "inline-block", wordWrap: "break-word" }}>
+                      {item.b}
                     </div>
                   </td>
-                  <td  >
-                    <div className="flex  pt-[1px]" style={{ lineHeight: "16px", display: "inline-block", width: "100%", textAlign: "end" }}>
-                      <span className="inline-block min-h-[16.5px]" />
-                      {item.d != "" && item.d != null && formatCurrency(item.d)}
+                  <td style={{ verticalAlign: "top", textAlign: "right" }}>
+                    <div className="flex" style={{display: "inline-block", width: "100%", textAlign: "end" }}>
+                      {item.c}
                     </div>
                   </td>
-                  <td  >
-                    <div className="flex  pt-[1px]" style={{ lineHeight: "16px", display: "inline-block", width: "100%", textAlign: "end" }}>
-                      <span className="inline-block min-h-[16.5px]" />
-                      {item.e != "" && item.e != null && formatCurrency(item.e)}
+                  <td style={{ verticalAlign: "top", textAlign: "right" }}>
+                    <div className="flex" style={{  display: "inline-block", width: "100%", textAlign: "end" }}>
+                      {item.d}
                     </div>
                   </td>
-                  <td style={{ width: "242px" }} className="detail-cl">
-                    <div className="test-class pl-[4px]  pt-[1px]" style={{ textAlign: "left", lineHeight: "16px", display: "inline-block", width: "217px", wordWrap: "break-word" }}>
-                      <span className="inline-block min-h-[16.5px]" />
+                  <td style={{ verticalAlign: "top", textAlign: "right" }}>
+                    <div className="flex" style={{ display: "inline-block", width: "100%", textAlign: "end" }}>
+                      {item.e}
+                    </div>
+                  </td>
+                  <td style={{ width: "175px", verticalAlign: "top" }} className="detail-cl text-left">
+                    <div style={{ display: "inline-block", width: "100%" }} >
                       {item.f}
                     </div>
                   </td>
@@ -202,33 +208,18 @@ const Template = ({
               );
             })}
 
-
           </tbody>
         </table>
       </div>
+      <footer className="mt-auto ">
+        <div style={{ border: "1px solid", borderBottomStyle: "hidden" }}></div>
+        <div className="flex justify-between mt-2">
+          <span>Website: www.agribank.com.vn</span>
+          <span className="ml-[140px]">{page}/{totalPage}</span>
+          <span>Người in: CULNLONG Thời gian in: 22/05/2024 09:45:23</span>
 
-      {/* {
-          footer &&  <Total/>
-
-        } */}
-
-      <footer className="mt-auto pt-2 text-[11px] text-center leading-[1.15] tracking-[-0.3px]">
-        <div style={{ display: "flex", justifyContent: "space-between", lineHeight: "14px" }}>
-          <div className="mb-[2px]" >
-            <p style={{ textAlign: "left" }}>Postal address: </p>
-            <p style={{ textAlign: "left" }}>198 TRAN QUANG KHAI AVENUE </p>
-            <p style={{ textAlign: "left" }}>HANOI - S.R.VIETNAM</p>
-          </div>
-          <div style={{ width: "240px" }}>
-            <p style={{ textAlign: "left" }}>Telex:  (0805) 411504 VCB - VT </p>
-            <p style={{ textAlign: "left" }}>Swift:  BFTV VNVX </p>
-            <p style={{ textAlign: "left" }}>Website:  www.vietcombank.com.vn</p>
-            <p style={{ textAlign: "left" }}>Contact center: 1900.54.54.13</p>
-          </div>
         </div>
-        <div className="mt-1 mt-auto " style={{ width: "100%" }}>
-          <p style={{ textAlign: "right" }}>Page {page} of &nbsp;{totalPage}</p>
-        </div>
+
       </footer>
 
 

@@ -17,48 +17,24 @@ const bidv = async () => {
       }}
     >
 <Template
-	data={data.slice(0,18)}
+	data={data.slice(0,15)}
 	page={1}
     header={true}
-	totalPage={6}
+	totalPage={3}
 />
+
 <Template
-	data={data.slice(18,44)}
+	data={data.slice(15,38)}
 	page={2}
-	header={false}
-	footer={false}
-	totalPage={6}
+	totalPage={3}
 />
+
 <Template
-	data={data.slice(44,70)}
+	data={data.slice(38,40)}
 	page={3}
 	header={false}
-	footer={false}
-	totalPage={6}
-/>
-<Template
-	data={data.slice(70,95)}
-	page={4}
-	header={false}
-	footer={false}
-	totalPage={6}
-/>
-
-<Template
-	data={data.slice(95,122)}
-	page={5}
-	header={false}
-	footer={false}
-	totalPage={6}
-/>
-
-
-<Template
-	data={data.slice(122,138)}
-	page={6}
-	header={false}
 	footer={true}
-	totalPage={6}
+	totalPage={3}
 />
 
     </main>
